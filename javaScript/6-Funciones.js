@@ -26,5 +26,33 @@ const sumarFuncionTipoFlecha = (a,b) =>     a+b;
 resultado = sumarFuncionTipoFlecha(3,3);
 console.log(resultado);
 
+//PARAMETROS y ARGUMENTOS
+/* 
+    Los PARAMETROS son los valores que Recibe una funcion
+    Los ARGUMENTOS son los valores que Mandamos a la funcion
+*/
+let resultados = sumarTodo(5,4,13,10,9);
+console.log(resultados);
+
+function sumarTodo(){
+    let suma = 0
+    for(let i = 0; i < arguments.length; i++){
+        suma += arguments[i]
+    }
+    return suma; 
+}
+
+//PASO POR REFERENCIA
+const persona = {
+    nombre: "carlo",
+    apellido : "pere"
+}
+function cambiarValorObjeto(persona1){
+    persona1.nombre = "lara";
+    persona1.apellido = "alskjdf";
+}
+cambiarValorObjeto(persona);
+console.log(persona);
+
 
 
